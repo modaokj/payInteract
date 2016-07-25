@@ -1,0 +1,1 @@
+http://oss.card.cd/

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.softright.tbcards.po">
+	<class name="LotteryActivity" table="lottery_activity" dynamic-update="true">
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="id"
+			type="string"
+			column="id"
+		>
+			<generator class="assigned"/>
+		</id>
+		<property
+			name="taobao_id"
+			column="taobao_id"
+			type="string"
+			not-null="true"
+			length="11"
+		/>
+		<property
+			name="activity_name"
+			column="activity_name"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+		<property
+			name="activity_startDate"
+			column="activity_startDate"
+			type="timestamp"
+			not-null="false"
+		/>
+		<property
+			name="activity_endDate"
+			column="activity_endDate"
+			type="timestamp"
+			not-null="false"
+		/>
+		<property
+			name="activity_createDate"
+			column="activity_createDate"
+			type="timestamp"
+			not-null="false"
+		/>
+		<property
+			name="activity_status"
+			column="activity_status"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="maQrcode_url"
+			column="maQrcode_url"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		<property
+			name="maQrcode_url_long"
+			column="maQrcode_url_long"
+			type="string"
+			not-null="false"
+			length="2000"
+		/>
+		<property
+			name="maQrcode_img_url"
+			column="maQrcode_img_url"
+			type="string"
+			not-null="false"
+			length="200"
+		/>
+		<property
+			name="remark"
+			column="remark"
+			type="string"
+			not-null="false"
+			length="2000"
+		/>
+	</class>
+</hibernate-mapping>

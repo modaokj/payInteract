@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.softright.tbcards.po">
+	<class name="ApiOperation" table="api_operation" dynamic-update="true">
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="id"
+			type="string"
+			column="id"
+		>
+			<generator class="assigned"/>
+		</id>
+		<property
+			name="time"
+			column="time"
+			type="timestamp"
+			not-null="true"
+		/>
+		<property
+			name="api"
+			column="api"
+			type="string"
+			not-null="true"
+			length="255"
+		/>
+		<property
+			name="content"
+			column="content"
+			type="string"
+			not-null="false"
+		/>
+		<property
+			name="result"
+			column="result"
+			type="string"
+			not-null="false"
+		/>
+		<property
+			name="ok_no"
+			column="ok_no"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+	</class>
+</hibernate-mapping>
